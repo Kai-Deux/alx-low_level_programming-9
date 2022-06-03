@@ -1,35 +1,18 @@
-nclude <stdio.h>
-
-
+#include <stdio.h>
 
 /**
- *
- * * main-print the lowercase alphabet in reverse
- *
- * * followed by a new line
- *
- * * Return: 0 if successful
- *
- * */
-
+* main-print the lowercase alphabet in reverse
+* followed by a new line
+* Return: 0 if successful
+*/
 int main(void)
-
 {
+char ch;
 
-	char ch;
-
-
-
-	for (ch = 'z'; ch >= 'a'; ch--)
-
-	{
-
-		putchar(ch);
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+for (ch = 'z'; ch >= 'a'; ch--)
+{
+putchar(ch);
+}
+putchar('\n');
+return (0);
 }
