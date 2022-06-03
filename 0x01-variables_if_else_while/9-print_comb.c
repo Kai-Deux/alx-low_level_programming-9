@@ -1,45 +1,23 @@
-nclude <stdio.h>
-
-
+#include <stdio.h>
 
 /**
- *
- * * main-print all possible combinations of single digit numbers
- *
- * * followed by a space
- *
- * * Return: 0 if successful
- *
- * */
-
+* main-print all possible combinations of single digit numbers
+* followed by a space
+* Return: 0 if successful
+*/
 int main(void)
-
 {
+int n;
 
-	int n;
-
-
-
-	for (n = 48; n < 58; n++)
-
-	{
-
-		putchar(n);
-
-		if (n != 57)
-
-		{
-
-			putchar(',');
-
-			putchar(' ');
-
-		}
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+for (n = 48; n < 58; n++)
+{
+putchar(n);
+if (n != 57)
+{
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+return (0);
 }
