@@ -1,4 +1,4 @@
-nclude <stdlib.h>
+#include <stdlib.h>
 
 #include <time.h>
 
@@ -8,58 +8,40 @@ nclude <stdlib.h>
 
 /**
  *
- *  * main - Entry point
+ * * main-print the last digit of the random number
  *
- *   *
+ * * stored in the variable n
  *
- *    * Return: Always return 0
+ * * Return: 0 if successful
  *
- *     */
-
-
+ * */
 
 int main(void)
 
 {
 
-		int n;
-
-			int ld;
+	int n;
 
 
 
-				srand(time(0));
+	srand(time(0));
 
-					n = rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 
-						ld = n % 10;
+	printf("Last digit of %d is %d ", n, n % 10);
 
+	if (n % 10 > 5)
 
+		printf("and is greater than 5\n");
 
-							if (ld > 5)
+	else if (n % 10 == 0)
 
-									{
+		printf("and is 0\n");
 
-												printf("Last digit of %d is %d and is greater than 5\n", n, ld);
+	else if (n % 10 < 6 && n % 10 != 0)
 
-													}
+		printf("and is less than 6 and not 0\n");
 
-								else if (ld < 6 && ld != 0)
-
-										{
-
-													printf("Last digit of %d is %d and is less than 6 and not 0\n", n, ld);
-
-														}
-
-									else if (ld == 0)
-
-											{
-
-														printf("Last digit of %d is %d and is 0\n", n, ld);
-
-															}
-
-										return (0);
+	return (0);
 
 }
