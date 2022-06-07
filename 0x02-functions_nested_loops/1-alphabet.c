@@ -1,20 +1,35 @@
 #include "main.h"
-#include <string.h>
+
+
 
 /**
-* main - Prints numbers between 00 to 89.
-*
-* Return: Always 0 (Success)
-*/
-int main(void)
+ *
+ *  * print_alphabet - print alphabet
+ *
+ *   *
+ *
+ *    * Return: void
+ *
+ *     */
+
+void print_alphabet(void)
+
 {
-  char word[9] = "_putchar";
-  int i = 0;
 
-  for (i = 0; i < 8; i++)
-    _putchar(word[i]);
+		char caract = 'a';
 
-  _putchar('\n');
 
-  return (0);
+
+			while (caract <= 'z')
+
+					{
+
+								_putchar(caract);
+
+										caract++;
+
+											}
+
+				_putchar('\n');
+
 }
