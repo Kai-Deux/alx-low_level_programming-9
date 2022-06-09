@@ -4,34 +4,36 @@
 
 /**
  *
- * *_isdigit - checks whether a  character is a digit or not
+ * *_isupper - checks if a  character is uppercase or not
  *
- * *@c: tested character
+ * *@c: character to be tested
  *
- * *Return: 1 if it is, 0 otherwise
+ * *Return: 1 whether it is, 0 otherwise
  *
  * */
 
 
 
-int _isdigit(int c)
+int _isupper(int c)
 
 {
 
-		int isdigit = 0;
+	    int isupper;
 
 
 
-			if ((c >= 48) && (c <= 57))
+	        isupper = 0;
+
+			if ((c >= 'A') && (c <= 'Z'))
 
 					{
 
-								isdigit = 1;
+								isupper = 1;
 
 									}
 
 
 
-				return (isdigit);
+				return (isupper);
 
 }
