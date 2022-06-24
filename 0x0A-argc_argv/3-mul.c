@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
 /**
- * main - prints sum of two numbers
- * @argc: first parameter
- * @argv: second parameter
- *
- * Description: prints sum of two numbers
- * Return: Always(0) Success
+ * main - multiplies two numbers
+ * @argc: first parameters
+ * @argv: second parameters
+ * Description: print the product of 2 numbers
+ * Return: 0 if successful
  */
+
 int main(int argc, char *argv[])
 {
-int i, j, sum;
-sum = 0;
-
-for (i = 1; i < argc; i++)
+int a, b, c, product;
+char error[10] = "Error";
+if (argc != 3)
 {
-for (j = 0; argv[i][j] != '\0'; j++)
+printf("%s\n", error);
+return (1);
+}
+for (a = 0; a < argc; a++)
 {
-if (!isdigit(argv[i][j]))
-{
-return (puts("Error"), 1);
+b = atoi(*(argv + 1)); /**b is first number*/
+c = atoi(argv[2]); /** c is second number*/
 }
-}
-sum += atoi(argv[i]);
-}
-return (printf("%d\n", sum), 0);
+product = b *c;
+printf("%d\n", product);
+return (0);
 }
